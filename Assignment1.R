@@ -25,10 +25,15 @@ nrow(atmdata)
 
 #Q4: Extract the last 2 rows of the data frame and print them to the console
 lastAtmdata <- atmdata[(nrow(atmdata)-1):nrow(atmdata),]
-lasttAtmdata
+lastAtmdata
 #o/p: 
 #       Ozone Solar.R Wind Temp Month Day
 #   152  18     131   8.0   76     9  29
-#   153  20     223  11.5   68     9  30
+#   153  20     223   11.5  68     9  30
 #@TODO - find a better way to solve the above problem
 
+#Q5: What is the value of Ozone in the 47th row
+atmdata[47,"Ozone"]
+#o/p: 
+#   [1] 21
+#@NB - other way to write this atmdata[47,][["Ozone"]] or atmdata[47,]$Ozone
